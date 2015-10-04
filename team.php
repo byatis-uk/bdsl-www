@@ -18,11 +18,8 @@
  }
  $fCnt=0;
  if (file_exists($divCsv)) {
- // process list file
  $fd = fopen ("$divCsv", "r");
- // initialize a loop to go through each line of the file
  while (!feof ($fd)) {
-    // declare an array to hold all of the contents of each row, indexed
     $buffer = fgetcsv($fd, 4096);
     // the 11 represents the number of columns in the text file
     for ($i = 0; $i < 11; ++$i){
@@ -81,11 +78,8 @@
  echo "   <table class=\"border\">\n";
  $mmOld='';
  $csvFile = 'csv/t'.$team.'.csv';
- // process division file
  $fd = fopen ("$csvFile", "r");
- // initialize a loop to go through each line of the file
  while (!feof ($fd)) {
-    // declare an array to hold all of the contents of each row, indexed
     $buffer = fgetcsv($fd, 4096);
     // the 6 represents the number of columns in the text file
     for ($i = 0; $i < 6; ++$i){
